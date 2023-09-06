@@ -21,7 +21,7 @@ namespace FrameworkDesign
         /// </summary>
         void RegisterUtility<T>(T instance) where T : IUtility;
 
-        T GetSystem<T>() where T : class,ISystem;
+        T GetSystem<T>() where T : class, ISystem;
 
         T GetModel<T>() where T : class, IModel;
 
@@ -30,9 +30,17 @@ namespace FrameworkDesign
         /// </summary>
         T GetUtility<T>() where T : class, IUtility;
 
-        void SendCommand<T>() where T : ICommand,new();
+        void SendCommand<T>() where T : ICommand, new();
 
         void SendCommand<T>(T command) where T : ICommand;
+
+        void SendEvent<T>() where T : new();
+
+        void SendEvent<T>(T e);
+
+        IUnRegister RegisterEvent<T>(Action<T> onEvent);
+
+        void UnRegisterEvent<T>(Action<T> onEvent);
     }
 
     public abstract class Architecture<T> : IArchitecture where T : Architecture<T>, new()
@@ -123,7 +131,7 @@ namespace FrameworkDesign
             }
         }
 
-        public void RegisterUtility<T>(T utility)where T:IUtility
+        public void RegisterUtility<T>(T utility) where T : IUtility
         {
             mContainer.Register<T>(utility);
         }
@@ -161,7 +169,7 @@ namespace FrameworkDesign
 
         public void SendCommand<T>() where T : ICommand, new()
         {
-            var command=new T();
+            var command = new T();
             command.SetArchitecture(this);
             command.Execute();
             command.SetArchitecture(null);
@@ -172,6 +180,28 @@ namespace FrameworkDesign
             command.SetArchitecture(this);
             command.Execute();
             command.SetArchitecture(null);
+        }
+
+        private ITypeEventSystem mTypeEventSystem=new TypeEventSystem();
+
+        public void SendEvent<T>() where T : new()
+        {
+            mTypeEventSystem.Send<T>();
+        }
+
+        public void SendEvent<T>(T e)
+        {
+            mTypeEventSystem.Send<T>(e);
+        }
+
+        public IUnRegister RegisterEvent<T>(Action<T> onEvent)
+        {
+            return mTypeEventSystem.Register<T>(onEvent);
+        }
+
+        public void UnRegisterEvent<T>(Action<T> onEvent)
+        {
+            mTypeEventSystem.UnRegister<T>(onEvent);
         }
     }
 }

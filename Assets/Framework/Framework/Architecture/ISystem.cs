@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FrameworkDesign
 {
-    public interface ISystem : IBelongToArchitecture,ICanSetArchitecture,ICanGetModel
+    public interface ISystem : IBelongToArchitecture,ICanSetArchitecture,ICanGetModel,ICanRegisterEvent,ICanSendEvent
     {
         void Init();
     }

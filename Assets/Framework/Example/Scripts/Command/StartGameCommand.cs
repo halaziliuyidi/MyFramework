@@ -5,7 +5,7 @@ namespace FrameworkDesign.Exmple
     {
         protected override void OnExecute()
         {
-            GameStartEvent.Trigger();
+            this.SendEvent<GameStartEvent>();
         }
     }
 }

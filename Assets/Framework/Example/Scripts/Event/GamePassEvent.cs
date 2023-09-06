@@ -2,7 +2,7 @@ using System;
 
 namespace FrameworkDesign.Exmple
 {
-    public class GamePassEvent:Event<GamePassEvent>
+    public class GamePassEvent
     {
        
     }
