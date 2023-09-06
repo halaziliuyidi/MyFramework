@@ -1,4 +1,4 @@
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public interface IGameModel : IModel
     {

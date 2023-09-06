@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkDesign.CounterApp
+namespace KLFramework.CounterApp
 {
     public interface IAchievementSystem:ISystem
     {

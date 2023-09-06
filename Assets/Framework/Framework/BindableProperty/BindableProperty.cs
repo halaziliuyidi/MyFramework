@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public class BindableProperty<T> where T: IEquatable<T>
     {

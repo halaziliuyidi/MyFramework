@@ -1,4 +1,4 @@
-﻿using FrameworkDesign.Example;
+﻿using KLFramework.Example;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace FrameworkDesign.CounterApp
+namespace KLFramework.CounterApp
 {
     public interface ICounterModel : IModel
     {

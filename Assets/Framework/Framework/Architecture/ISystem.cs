@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public interface ISystem : IBelongToArchitecture,ICanSetArchitecture,ICanGetModel,ICanRegisterEvent,ICanSendEvent,ICanGetSystem
     {

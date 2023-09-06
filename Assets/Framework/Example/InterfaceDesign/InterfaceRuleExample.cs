@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class CanDoEverything
     {

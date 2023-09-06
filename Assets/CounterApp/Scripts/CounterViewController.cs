@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FrameworkDesign.CounterApp
+namespace KLFramework.CounterApp
 {
     public class CounterViewController : MonoBehaviour,IController
     {

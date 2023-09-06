@@ -1,8 +1,8 @@
-using FrameworkDesign.CounterApp;
+using KLFramework.CounterApp;
 using UnityEngine;
 
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class Enemy : MonoBehaviour,IController
     {

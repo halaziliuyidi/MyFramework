@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public class IOCContainer
     {

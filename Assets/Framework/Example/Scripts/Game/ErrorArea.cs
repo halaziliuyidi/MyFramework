@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class ErrorArea : MonoBehaviour,IController
     {

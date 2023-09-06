@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEditor;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public interface IModel : IBelongToArchitecture, ICanSetArchitecture,ICanGetUtility,ICanSendEvent
     {

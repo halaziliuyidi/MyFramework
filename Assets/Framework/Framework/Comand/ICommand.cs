@@ -1,5 +1,5 @@
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public interface ICommand : IBelongToArchitecture, ICanSetArchitecture, ICanGetSystem, ICanGetModel, ICanSendCommand, ICanGetUtility, ICanSendEvent
     {

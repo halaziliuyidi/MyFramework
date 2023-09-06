@@ -3,7 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace FrameworkDesign.CounterApp
+namespace KLFramework.CounterApp
 {
     public interface IStorage:IUtility
     {

@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
 
     public interface ICanRegisterEvent : IBelongToArchitecture

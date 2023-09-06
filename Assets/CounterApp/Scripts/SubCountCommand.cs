@@ -1,5 +1,5 @@
 ﻿
-namespace FrameworkDesign.CounterApp
+namespace KLFramework.CounterApp
 {
     public class SubCountCommand : AbstractCommand
     {

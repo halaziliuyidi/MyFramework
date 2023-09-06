@@ -1,0 +1,39 @@
+{
+  "infoList": [
+    {
+      "panelTypeString": "ItemMessage",
+      "path": "UIPanel/ItemMessagePanel"
+    },
+
+    {
+      "panelTypeString": "MainMenu",
+      "path": "UIPanel/MainMenuPanel"
+    },
+
+    {
+      "panelTypeString": "Shop",
+      "path": "UIPanel/ShopPanel"
+    },
+
+    {
+      "panelTypeString": "Task",
+      "path": "UIPanel/TaskPanel"
+    },
+
+    {
+      "panelTypeString": "Achievement",
+      "path": "UIPanel/AchievementPanel"
+    },
+
+    {
+      "panelTypeString": "Pop",
+      "path": "UIPanel/PopPanel"
+    },
+
+    {
+      "panelTypeString": "System",
+      "path": "UIPanel/SystemPanel"
+    }
+
+  ]
+}

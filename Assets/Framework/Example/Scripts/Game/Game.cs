@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class Game : MonoBehaviour,IController
     {

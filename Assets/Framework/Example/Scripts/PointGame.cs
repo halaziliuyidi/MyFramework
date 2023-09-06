@@ -1,7 +1,5 @@
 ﻿
-using FrameworkDesign.CounterApp;
-
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class PointGame : Architecture<PointGame>
     {

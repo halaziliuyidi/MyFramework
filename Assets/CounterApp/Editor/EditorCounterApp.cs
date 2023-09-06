@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace FrameworkDesign.CounterApp.Editor
+namespace KLFramework.CounterApp.Editor
 {
-    public class EditorCounterApp : EditorWindow, FrameworkDesign.IController
+    public class EditorCounterApp : EditorWindow, KLFramework.IController
     {
         [MenuItem("EditorConterApp/Open")]
         static void Open()

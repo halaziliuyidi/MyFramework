@@ -1,5 +1,5 @@
 ﻿
-namespace FrameworkDesign
+namespace KLFramework
 {
     public interface ICanSendEvent:IBelongToArchitecture
     {

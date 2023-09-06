@@ -2,7 +2,7 @@
 using System;
 using System.Reflection;
 
-namespace FrameworkDesign
+namespace KLFramework
 {
     public class Singleton<T> where T : Singleton<T>
     {

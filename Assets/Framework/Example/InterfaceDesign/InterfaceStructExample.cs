@@ -1,7 +1,7 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class InterfaceStructExample:MonoBehaviour
     {

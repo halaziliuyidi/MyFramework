@@ -1,6 +1,6 @@
 using System;
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public class GamePassEvent
     {

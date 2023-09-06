@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace FrameworkDesign.Example
+namespace KLFramework.Example
 {
     public interface IStorage : IUtility
     {
