@@ -3,7 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class DIPExample : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-﻿using FrameworkDesign.Exmple;
+﻿using FrameworkDesign.Example;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace FrameworkDesign.CounterApp
         BindableProperty<int> Count { get; }
     }
 
-    public class CounterModel :AbstractModel, ICounterModel
+    public class CounterModel : AbstractModel, ICounterModel
     {
 
         protected override void OnInit()
@@ -24,10 +24,10 @@ namespace FrameworkDesign.CounterApp
 
             Count.Value = storage.LoadInt("COUNTER_COUNT", 0);
 
-            Count.OnValueChanged += count =>
+            Count.RegisterOnValueChanged(count =>
             {
                 storage.SaveInt("COUNTER_COUNT", count);
-            };
+            });
         }
 
         public BindableProperty<int> Count { get; } = new BindableProperty<int>()

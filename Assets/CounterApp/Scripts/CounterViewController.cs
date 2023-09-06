@@ -13,7 +13,7 @@ namespace FrameworkDesign.CounterApp
         {
             mCounterModel = this.GetModel<ICounterModel>();
 
-            mCounterModel.Count.OnValueChanged += OnCountChanged;
+            mCounterModel.Count.RegisterOnValueChanged(OnCountChanged);
 
             OnCountChanged(mCounterModel.Count.Value);
 
@@ -37,7 +37,7 @@ namespace FrameworkDesign.CounterApp
 
         void OnDestroy()
         {
-            mCounterModel.Count.OnValueChanged -= OnCountChanged;
+            mCounterModel.Count.UnRegisterOnValueChanged(OnCountChanged);
             mCounterModel = null;
         }
 

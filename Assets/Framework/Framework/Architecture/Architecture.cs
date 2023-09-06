@@ -1,4 +1,4 @@
-﻿using FrameworkDesign.Exmple;
+﻿using FrameworkDesign.Example;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +21,18 @@ namespace FrameworkDesign
         /// </summary>
         void RegisterUtility<T>(T instance) where T : IUtility;
 
+        /// <summary>
+        /// 获取系统层
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         T GetSystem<T>() where T : class, ISystem;
 
+        /// <summary>
+        /// 获取数据层
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         T GetModel<T>() where T : class, IModel;
 
         /// <summary>
@@ -104,17 +114,6 @@ namespace FrameworkDesign
 
         private IOCContainer mContainer = new IOCContainer();
 
-        public static T Get<T>() where T : class
-        {
-            MakeSureArchitecture();
-            return mArchitecture.mContainer.Get<T>();
-        }
-
-        public static void Register<T>(T instance)
-        {
-            MakeSureArchitecture();
-            mArchitecture.mContainer.Register<T>(instance);
-        }
 
         //注册Model层API
         public void RegisterModel<T>(T model) where T : IModel

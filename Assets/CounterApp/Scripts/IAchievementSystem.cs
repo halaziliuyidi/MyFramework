@@ -15,7 +15,7 @@ namespace FrameworkDesign.CounterApp
 
             var previousCount = counterModel.Count.Value;
 
-            counterModel.Count.OnValueChanged += newCount =>
+            counterModel.Count.RegisterOnValueChanged(newCount =>
             {
                 if (previousCount < 10 && newCount >= 10)
                 {
@@ -27,7 +27,7 @@ namespace FrameworkDesign.CounterApp
                 }
 
                 previousCount = newCount;
-            };
+            });
         }
     }
 }

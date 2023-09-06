@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public interface ICanSayHello
     {

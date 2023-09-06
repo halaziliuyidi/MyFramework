@@ -1,7 +1,7 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class InterfaceStructExample:MonoBehaviour
     {

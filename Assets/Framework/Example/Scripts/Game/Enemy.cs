@@ -2,7 +2,7 @@ using FrameworkDesign.CounterApp;
 using UnityEngine;
 
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class Enemy : MonoBehaviour,IController
     {

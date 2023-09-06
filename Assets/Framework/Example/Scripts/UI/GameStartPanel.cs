@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class GameStartPanel : MonoBehaviour,IController
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class GamePassEvent
     {

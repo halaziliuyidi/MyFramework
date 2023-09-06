@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class UI : MonoBehaviour,IController
     {

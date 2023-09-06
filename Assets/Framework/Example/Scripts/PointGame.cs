@@ -1,13 +1,17 @@
 ﻿
 using FrameworkDesign.CounterApp;
 
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
     public class PointGame : Architecture<PointGame>
     {
         protected override void Init()
         {
-            Register<IGameModel>(new GameModel());
+            RegisterModel<IGameModel>(new GameModel());
+
+            RegisterSystem<IScoreSystem>(new ScoreSystem());
+
+            RegisterUtility<IStorage>(new PlayerPrefsStorage());
         }
     }
 }

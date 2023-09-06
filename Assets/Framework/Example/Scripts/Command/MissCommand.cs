@@ -1,11 +1,11 @@
 ﻿
 namespace FrameworkDesign.Example
 {
-    public class StartGameCommand : AbstractCommand
+    public class MissCommand : AbstractCommand
     {
         protected override void OnExecute()
         {
-            this.SendEvent<GameStartEvent>();
+            this.SendEvent<OnMissEvent>();
         }
     }
 }

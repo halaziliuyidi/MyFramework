@@ -1,6 +1,6 @@
-namespace FrameworkDesign.Exmple
+namespace FrameworkDesign.Example
 {
-    public interface IGameModel:IModel
+    public interface IGameModel : IModel
     {
         public BindableProperty<int> KillCount { get; }
 
@@ -16,7 +16,7 @@ namespace FrameworkDesign.Exmple
 
     }
 
-    public class GameModel :AbstractModel,IGameModel
+    public class GameModel : AbstractModel, IGameModel
     {
         public BindableProperty<int> KillCount { get; } = new BindableProperty<int>()
         {
@@ -40,7 +40,14 @@ namespace FrameworkDesign.Exmple
 
         protected override void OnInit()
         {
-            
+            var storage = this.GetUtility<IStorage>();
+
+            BestScore.Value = storage.LoadInt(nameof(BestScore), 0);
+
+            BestScore.RegisterOnValueChanged(v =>
+            { 
+                storage.SaveInt(nameof(BestScore), v); 
+            });
         }
     }
 }
