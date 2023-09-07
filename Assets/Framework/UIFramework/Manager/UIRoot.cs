@@ -7,6 +7,7 @@ namespace KLFramework.UIFramework
         void Start ()
         {
             UIManager.Instance.PushPanel(UIPanelType.MainMenu);
+
         }
     }
 }
