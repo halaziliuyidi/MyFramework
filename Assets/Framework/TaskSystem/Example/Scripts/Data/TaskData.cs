@@ -14,7 +14,7 @@ namespace KLFramework.TaskSyatem
         public int task_sub_id;
         //进度
         public int progress;
-        //奖励是否被领取
+        //奖励是否被领取,1为已经领取，0为未领取
         public short award_is_get;
     }
 
@@ -47,7 +47,7 @@ namespace KLFramework.TaskSyatem
             callBack();
         }
 
-        private void AddOrUpdateData(TaskDataItem itemData)
+        public void AddOrUpdateData(TaskDataItem itemData)
         {
             bool isUpdate = false;
 

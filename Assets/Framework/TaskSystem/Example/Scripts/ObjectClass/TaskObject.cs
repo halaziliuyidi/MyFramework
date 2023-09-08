@@ -18,8 +18,7 @@ namespace KLFramework.TaskSyatem
        public int num;
     }
 
-    [CreateAssetMenu]
-    public class TaskObject : ScriptableObject
+    public class TaskObject
     {
         //链id，每个任务都有它对应的链id，同一条链上的任务的链id相同
         public int task_chain_id;

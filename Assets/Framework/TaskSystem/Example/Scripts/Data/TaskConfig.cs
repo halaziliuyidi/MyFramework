@@ -1,14 +1,31 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LitJson;
 
 namespace KLFramework.TaskSyatem
 {
-    public class TaskConfig : MonoBehaviour
+    public class TaskConfig
     {
+        private static TaskConfig instance;
+
+        public static TaskConfig Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new TaskConfig();
+                }
+                return instance;
+            }
+        }
+
+        // 任务配置，(链id : 子任务id : TaskObject)
         private Dictionary<int, Dictionary<int, TaskObject>> mTaskConfig;
 
+        /// <summary>
+        /// 读取配置
+        /// </summary>
         public void LoadConfig()
         {
             mTaskConfig = new Dictionary<int, Dictionary<int, TaskObject>>();
@@ -32,13 +49,18 @@ namespace KLFramework.TaskSyatem
             }
         }
 
-        public TaskObject GetTaskObject(int chainID,int taskSubId)
+        /// <summary>
+        /// 获取配置项
+        /// </summary>
+        /// <param name="chainId"></param>
+        /// <param name="taskSubId"></param>
+        /// <returns></returns>
+        public TaskObject GetTaskObject(int chainId,int taskSubId)
         {
-            if (mTaskConfig.ContainsKey(chainID) && mTaskConfig[chainID].ContainsKey(taskSubId))
+            if (mTaskConfig.ContainsKey(chainId) && mTaskConfig[chainId].ContainsKey(taskSubId))
             {
-                return mTaskConfig[chainID][taskSubId];
+                return mTaskConfig[chainId][taskSubId];
             }
-
             return null;
         }
     }
